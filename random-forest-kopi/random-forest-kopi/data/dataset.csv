@@ -1,0 +1,15 @@
+No,Waktu,Uang Saku,Mengantuk,Cuaca,Beli Kopi
+1,Pagi,Tinggi,Tidak,Cerah,Tidak
+2,Pagi,Tinggi,Tidak,Hujan,Tidak
+3,Siang,Tinggi,Tidak,Cerah,Ya
+4,Malam,Sedang,Tidak,Cerah,Ya
+5,Malam,Rendah,Ya,Cerah,Ya
+6,Malam,Rendah,Ya,Hujan,Tidak
+7,Siang,Rendah,Ya,Hujan,Ya
+8,Pagi,Sedang,Tidak,Cerah,Tidak
+9,Pagi,Rendah,Ya,Cerah,Ya
+10,Malam,Sedang,Ya,Cerah,Ya
+11,Pagi,Sedang,Ya,Hujan,Ya
+12,Siang,Sedang,Tidak,Hujan,Ya
+13,Siang,Tinggi,Ya,Cerah,Ya
+14,Malam,Sedang,Tidak,Hujan,Tidak

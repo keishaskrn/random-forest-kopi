@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulasi Random Forest — Prediksi Mahasiswa Membeli Kopi di Kantin Kampus</title>
+  <meta name="description" content="Simulasi perhitungan manual Random Forest (Entropy, Gain, Split Info, Gain Ratio) langkah demi langkah.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Tugas 1 · Machine Learning</p>
+      <h1>Simulasi Random Forest</h1>
+      <p class="sub">Studi kasus: Prediksi Mahasiswa Membeli Kopi di Kantin Kampus</p>
+      <p class="by">Keisha Sasikirana Putri · NIM 301240043 · Teknik Informatika, Universitas Bale Bandung</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card" id="sec-data">
+      <h2><span class="no">1</span> Dataset</h2>
+      <p class="hint">Data berformat CSV (pemisah koma, titik koma, atau tab). Kolom <b>terakhir</b> adalah target/kelas. Kolom pertama bernama <code>No</code> bersifat opsional. Anda dapat mengganti data dengan studi kasus lain.</p>
+      <div class="grid2">
+        <div>
+          <textarea id="csv" spellcheck="false" rows="16"></textarea>
+          <div class="btns">
+            <button id="btn-default" class="ghost" type="button">Muat data contoh</button>
+            <button id="btn-apply" type="button">Terapkan data</button>
+          </div>
+          <p id="msg" class="msg" role="alert"></p>
+        </div>
+        <div id="data-view"></div>
+      </div>
+    </section>
+
+    <section class="card" id="sec-param">
+      <h2><span class="no">2</span> Parameter Random Forest</h2>
+      <div class="params">
+        <label>Jumlah pohon (n_trees)<input id="p-trees" type="number" min="1" max="9" value="3"></label>
+        <label>Atribut acak per node (m)<input id="p-m" type="number" min="1" value="2"></label>
+        <label>Seed (agar hasil dapat diulang)<input id="p-seed" type="number" value="31"></label>
+        <div class="btns end">
+          <button id="btn-rand" class="ghost" type="button">Acak seed</button>
+          <button id="btn-run" type="button">Jalankan simulasi</button>
+        </div>
+      </div>
+      <p class="hint">Setiap pohon dilatih dari sampel <i>bootstrap</i> (n data, dengan pengembalian). Pada setiap node dipilih <b>m</b> atribut secara acak, lalu atribut dengan <b>Gain Ratio</b> tertinggi dipakai untuk memecah data.</p>
+    </section>
+
+    <section class="card" id="sec-boot" hidden>
+      <h2><span class="no">3</span> Bootstrap Sampling</h2>
+      <div id="boot-view"></div>
+    </section>
+
+    <section class="card" id="sec-tree" hidden>
+      <h2><span class="no">4</span> Membangun Pohon Keputusan</h2>
+      <div id="tree-view"></div>
+    </section>
+
+    <section class="card" id="sec-pred" hidden>
+      <h2><span class="no">5</span> Prediksi &amp; Mayoritas Vote</h2>
+      <div id="pred-form" class="params"></div>
+      <div id="pred-view"></div>
+    </section>
+  </main>
+
+  <footer class="foot wrap">Simulasi Random Forest · Keisha Sasikirana Putri (301240043) · Dibuat dengan HTML, CSS, dan JavaScript murni tanpa server.</footer>
+
+  <script src="js/rf.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

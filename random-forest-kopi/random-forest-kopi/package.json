@@ -1,0 +1,8 @@
+{
+  "name": "random-forest-kopi",
+  "version": "1.0.0",
+  "description": "Simulasi Random Forest: Prediksi Mahasiswa Membeli Kopi di Kantin Kampus",
+  "scripts": { "test": "node tests/test.js", "start": "python3 -m http.server 8000" },
+  "author": "Keisha Sasikirana Putri (301240043)",
+  "license": "MIT"
+}
